@@ -1,12 +1,16 @@
-I"E<p>I am …</p>
+I"�<!-- 팝업으로 포폴 -->
+<!-- 내소개, 기술스택, 프로젝트 -->
+<p>I am …</p>
 
 <h2 id="contact-form">Contact form</h2>
 
 <form class="contact-form" action="https://getsimpleform.com/messages?form_api_token=" method="post">
-    <input type="hidden" name="redirect_to" value="/pages/thankyou.html" />
+    <input type="hidden" name="redirect_to" value="https://kei9641.github.io/pages/thankyou.html" />
     <input required="required" id="name" placeholder="* Name" type="text" name="name" />
     <input required="required" id="email" placeholder="* Email" type="email" name="email" />
     <textarea name="message" placeholder="Enter your message here..." id="message" cols="30" rows="7"></textarea>
     <input type="submit" value="Send" />
 </form>
+
+<!-- [Back to main page](/index.html) -->
 :ET

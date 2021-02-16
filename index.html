@@ -4,6 +4,7 @@ title: Coding-dong-dang
 description: 신입 웹 개발자의 궁금증 해결 일지
 ---
 
-{% for page in paginator.posts %}
+
+{% for page in site.posts %}
 {% include articles.html %}
 {% endfor %}
