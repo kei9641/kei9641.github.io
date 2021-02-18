@@ -79,4 +79,3 @@ highlighter: rouge
 markdown: kramdown
 kramdown:
   input: GFM
-encoding: "euc-kr"
