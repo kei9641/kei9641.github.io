@@ -1,0 +1,231 @@
+I"�"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rhoncus luctus quam in gravida.
+Mauris rutrum ullamcorper pellentesque. Aliquam posuere euismod erat, ac consequat leo ullamcorper non. 
+Vestibulum commodo nibh justo. Praesent gravida elementum sapien, ut convallis massa bibendum nec.
+Suspendisse interdum urna condimentum quam vestibulum, sit amet feugiat quam laoreet.</p>
+
+<blockquote class="blockquote" cite="http://www.worldwildlife.org/who/index.html">
+  <p>The first rule of any technology used in a business is that automation applied to an efficient operation will magnify the efficiency. The second is that automation applied to an inefficient operation will magnify the inefficiency.</p>
+  <footer><cite> - Bill Gates</cite></footer>
+</blockquote>
+
+<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+Nunc orci purus, egestas a erat pulvinar, fringilla sodales turpis. Fusce luctus eu eros at maximus.</p>
+
+<h2 id="this-is-h2-header">This is h2 header</h2>
+
+<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+Nunc orci purus, egestas a erat pulvinar, fringilla sodales turpis. Fusce luctus eu eros at maximus.</p>
+
+<p class="bottomless"><a name="definition-dfa"></a></p>
+
+<div class="env-header">
+  <p>Definition 1.0</p>
+</div>
+
+<div class="definition alert">
+  <p>A <strong>deterministic finite automata</strong> \(M\) is a 5-tuple \((Q, Σ, δ, q_0, F )\), where</p>
+
+  <ol>
+    <li>\(Q\) is a finite set called the <strong>states</strong>,</li>
+    <li>\(Σ\) is a finite set called the <strong>alphabet</strong>,</li>
+    <li>\(δ : Q × Σ → Q\) is the <strong>transition function</strong>,</li>
+    <li>\(q_0 ∈ Q\) is the <strong>start state</strong>, and</li>
+    <li>\(F ⊆ Q\) is the set of <strong>accept states</strong>.</li>
+  </ol>
+
+</div>
+
+<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+Nunc orci purus, egestas a erat pulvinar, fringilla sodales turpis. Fusce luctus eu eros at maximus.</p>
+
+<div class="info alert">
+  <p><strong>INFO:</strong> This is info message. <code class="language-plaintext highlighter-rouge">This is code</code>. <a href="#">This is link</a>. <em>This is italic</em>.</p>
+</div>
+
+<p>Class aptent taciti sociosquad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+
+<div class="warning alert">
+  <p><strong>WARNING:</strong> This is warning message. <code class="language-plaintext highlighter-rouge">This is code</code>. <a href="#">This is link</a>. <em>This is italic</em>.</p>
+</div>
+
+<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+
+<div class="note alert">
+  <p><strong>NOTE:</strong> This is note message. <code class="language-plaintext highlighter-rouge">This is code</code>. <a href="#definition-dfa">Definition 1.0</a>. <em>This is italic</em>.</p>
+</div>
+
+<div class="success alert">
+  <h4 id="this-is-success-message">This is success message!</h4>
+
+  <p><code class="language-plaintext highlighter-rouge">This is code</code>. <a href="#">This is link</a>. <em>This is italic</em>.</p>
+
+  <p>Mauris sed augue molestie, git clone ac consequat erat posuere. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur odio sapien, sollicitudin ut pharetra in, tincidunt vel elit.</p>
+
+  <ul>
+    <li>List item number 1
+      <ul>
+        <li>Nested list item number 1</li>
+        <li>Curabitur pharetra eget ante at vestibulum. Mauris ullamcorper lacus sed augue molestie, ac consequat erat posuere.</li>
+      </ul>
+    </li>
+    <li>List item number 2</li>
+    <li>List item number 3</li>
+  </ul>
+
+  <p>Curabitur pharetra eget ante at vestibulum.</p>
+</div>
+
+<h3 id="this-is-h3-header">This is h3 header</h3>
+
+<p>Curabitur pharetra eget ante at vestibulum. Mauris ullamcorper lacus sed augue molestie, ac consequat erat posuere. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur odio sapien, sollicitudin ut pharetra in, tincidunt vel elit.</p>
+
+<div class="env-header">HTML/CSS</div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="code"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+   <span class="nt">&lt;style&gt;</span>
+      <span class="nt">p</span> <span class="p">{</span>
+          <span class="nl">border-style</span><span class="p">:</span> <span class="nb">solid</span><span class="p">;</span>
+          <span class="nl">border-bottom</span><span class="p">:</span> <span class="nb">thick</span> <span class="nb">dotted</span> <span class="m">#ff0000</span><span class="p">;</span>
+        <span class="p">}</span>
+   <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;p&gt;</span>This is some text in a paragraph.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Class aptent taciti <code class="language-plaintext highlighter-rouge">sociosqu ad litora torquent</code> per conubia nostra, per inceptos himenaeos. 
+Nunc orci purus, egestas a erat pulvinar, fringilla sodales turpis. <code class="language-plaintext highlighter-rouge">Fusce luctus</code> eu eros at maximus.</p>
+
+<ul>
+  <li>List item number 1
+    <ul>
+      <li>Nested list item 1</li>
+      <li>Nested list item 2
+        <ul>
+          <li>Deep nested list item 1ante at vestibulum. Mauris ullamcorper lacus sed augue molestie.</li>
+          <li>Deep nested list item 2</li>
+        </ul>
+      </li>
+      <li>Nested list item number 3</li>
+    </ul>
+  </li>
+  <li>List item number 3</li>
+</ul>
+
+<ol>
+  <li>List item number 1
+    <ol>
+      <li>Nested list item number 1</li>
+      <li>Curabitur pharetra eget ante at vestibulum. Mauris ullamcorper lacus sed augue molestie, ac consequat erat posuere.</li>
+    </ol>
+  </li>
+  <li>List item number 2</li>
+  <li>List item number 3</li>
+</ol>
+
+<h4 id="this-is-h4-header">This is h4 header</h4>
+
+<p>Curabitur pharet<sub>r</sub>a eget ante at vestibulum. Mauris ullamcorper lacus sed augue molestie, ac consequat erat posuere. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur odio sapien, sollicitudin ut pharetra in, tincidunt vel elit.</p>
+
+<figure class="table">
+
+  <table>
+    <thead>
+      <tr>
+        <th>Header One</th>
+        <th>Header Two</th>
+        <th>Header Three</th>
+        <th>Head</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Item One</td>
+        <td>Item Two</td>
+        <td>Item Three</td>
+        <td>Long Item Four</td>
+      </tr>
+      <tr>
+        <td>Item One</td>
+        <td>Item Two</td>
+        <td>Item Three</td>
+        <td>Long Item Four</td>
+      </tr>
+      <tr>
+        <td>Item One</td>
+        <td>Item Two</td>
+        <td>Item Three</td>
+        <td>Long Item Four</td>
+      </tr>
+      <tr>
+        <td>Item One</td>
+        <td>Item Two</td>
+        <td>Item Three</td>
+        <td>Long Item Four</td>
+      </tr>
+      <tr>
+        <td>Item One</td>
+        <td>Item Two</td>
+        <td>Item Three</td>
+        <td>Long Item Four</td>
+      </tr>
+      <tr>
+        <td>Item One</td>
+        <td>Item Two</td>
+        <td>Item Three</td>
+        <td>Long Item Four</td>
+      </tr>
+      <tr>
+        <td>Item One</td>
+        <td>Item Two</td>
+        <td>Item Three</td>
+        <td>Long Item Four</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <figcaption>
+    <p><strong>Table 1:</strong> Eestie, ac consequat erat posuere.</p>
+  </figcaption>
+</figure>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rhoncus luctus quam in gravida.
+Mauris rutrum ullamcorper pellentesque. Aliquam posuere euismod erat, ac consequat leo ullamcorper non.</p>
+
+<p>ac consequat erat posuere. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur odio sapien, sollicitudin ut pharetra in, tincidunt vel elit.</p>
+
+<figure>
+<img alt="image test" src="/resources/images/main_front.jpg" />
+<figcaption>
+<strong>Figure 1: </strong>Curabitur pharetra eget ante at vestibulum. Mauris ullamcorper lacus sed augue molestie, ac consequat erat posuere. 
+</figcaption>
+</figure>
+
+<p>Bold text: <strong>I am bold</strong></p>
+
+<p>Italic text: <em>I am italic</em></p>
+
+<p>Inline code: <code class="language-plaintext highlighter-rouge">html</code>, <code class="language-plaintext highlighter-rouge">css</code>, <code class="language-plaintext highlighter-rouge">git clone &lt;url&gt;</code>.</p>
+
+<p>Link text: <a href="http://www.dennis-grinch.co.uk">more examples</a></p>
+
+<p>Abbreviation: <abbr title="Content Management System">CMS</abbr></p>
+:ET
