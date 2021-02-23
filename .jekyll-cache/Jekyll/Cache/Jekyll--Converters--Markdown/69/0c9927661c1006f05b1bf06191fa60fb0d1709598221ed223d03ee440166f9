@@ -1,0 +1,16 @@
+I"<p>(Q,Σ,δ,q0,F)≠(Σ,Q,δ,q0,F)
+</p>
+<div class="definition alert">
+A **deterministic finite automata** $$M$$ is a 5-tuple $$(Q, Σ, δ, q_0, F )$$, where  
+
+1. $$Q$$ is a finite set called the **states**,
+2. $$Σ$$ is a finite set called the **alphabet**,
+3. $$δ : Q × Σ → Q$$ is the **transition function**,
+4. $$q_0 ∈ Q$$ is the **start state**, and
+5. $$F ⊆ Q$$ is the set of **accept states**.
+
+
+</div>
+
+<p><strong>잘못된 내용이 있거나 조언이 있다면 언제든지 환영입니다^.^</strong></p>
+:ET
