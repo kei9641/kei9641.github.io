@@ -1,0 +1,57 @@
+I"�<blockquote class="blockquote">
+  <p>제목 : 파도반 수열(<a href="https://www.acmicpc.net/problem/9461">boj 9461번</a>) <br />
+난이도 : silver 3🥈 <br />
+관련 알고리즘 : <a href="/tags/dp.html">DP</a></p>
+</blockquote>
+
+<h2 id="1-알고리즘-설명">1. 알고리즘 설명</h2>
+<p class="bottomless">파도반 수열의 규칙만 잘 찾는다면 <a href="/algo/fibo/#fibo_dp">피보나치 수열</a>과 같은 방법으로 풀면 됩니다.</p>
+
+<div class="warning alert">
+  <p style="text-align: center; font-size: 19px; font-weight: bolder;">
+(0) 1 1 1 2 2 3 4 5 7 9 12 … 
+</p>
+</div>
+
+<p>\(F_n = 
+\cases{
+0  &amp; \text{if } n = 0\cr
+1  &amp; \text{if } n = 1\cr
+F_{n-1} + F_{n-2} &amp; \text{if } n\gt 1
+}\)</p>
+<h2 id="2-python-코드">2. python 코드</h2>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="code"><pre><span class="c1"># 메모리 : 122244 KB
+# 시간 : 116 ms
+</span>
+<span class="n">memo</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">dp</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">):</span>
+        <span class="n">memo</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">memo</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">memo</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">])</span>
+    
+    <span class="k">return</span> <span class="n">memo</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+
+<span class="n">T</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">dp</span><span class="p">(</span><span class="n">N</span><span class="p">))</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p><strong>잘못된 내용이 있거나 조언이 있다면 언제든지 환영입니다^.^</strong></p>
+:ET

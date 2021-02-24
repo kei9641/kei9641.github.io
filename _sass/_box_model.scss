@@ -55,8 +55,7 @@ article > .blockquote {
 }
 
 //---------------------------BASELINE-DOUBLE
-article > .blockquote,
-.table,
+article > .table,
 figure,
 .alert {
   margin-bottom: $l-h-baseline-double;
@@ -226,7 +225,6 @@ article > h3,
 
 //---------------------------BASELINE-DOUBLE
 article:not(.preview) > p,
-article > .blockquote p,
 article > ul,
 article > ol {
   padding-bottom: $l-h-baseline-double;

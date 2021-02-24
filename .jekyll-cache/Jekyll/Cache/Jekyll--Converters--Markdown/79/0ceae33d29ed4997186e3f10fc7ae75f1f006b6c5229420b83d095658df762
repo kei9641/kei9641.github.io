@@ -1,6 +1,0 @@
-I"d\[F_n = 
-\cases{
-F_n  &amp; \text{if } n\le 1\cr
-F_{n-1} + F_{n-2} &amp; \text{if } n\gt 1
-}\]
-:ET

@@ -1,0 +1,138 @@
+I"�'<h2 id="1-피보나치-수">1. 피보나치 수</h2>
+<p class="bottomless">피보나치 수는 <strong>레오나르도 피보나치</strong> 가 수의 규칙에 대해 연구하여 <a href="https://www.youtube.com/watch?v=sMBprenag4Q">토끼🐰 수의 증가</a>를 예시로 들어 설명하였습니다.</p>
+<p>피보나치 수는 자연계뿐만 아니라, 과학, 건축, 예술에 이르기까지 아름답거나 질서정연한 어떤 형식이 있는 곳이면 빠지지 않고 등장하고 있으며, 수열에서 두 수 사이의 비를 통해 <strong>황금비</strong> 를 구할 수 있습니다.</p>
+
+<figure>
+  <p><img src="/resources/images/FibonacciBlocks.jpg" style="width:300px; margin:auto;" /></p>
+  <figcaption>
+    <p><strong>Figure 1: </strong>피보나치 수를 이용한 사각형 채우기</p>
+  </figcaption>
+</figure>
+
+<p>피보나치 수는 <strong>첫번째와 두번째 숫자가 1</strong> 이고, 그 뒤의 모든 항은 <strong>바로 앞 두 수의 합</strong> 으로 나타나는 수열입니다.
+(편의상 0번째 숫자를 0으로 두기도 해요.)</p>
+
+<div class="warning alert">
+  <p style="text-align: center; font-size: 19px; font-weight: bolder;">
+(0) 1 1 2 3 5 8 13 21 34 55 89 … 
+</p>
+</div>
+
+\[F_n = 
+\cases{
+0  &amp; \text{if } n = 0\cr
+1  &amp; \text{if } n = 1\cr
+F_{n-1} + F_{n-2} &amp; \text{if } n\gt 1
+}\]
+
+<h2 id="2-피보나치-수열-5가지-알고리즘">2. 피보나치 수열 5가지 알고리즘</h2>
+<p class="bottomless">피보나치 수열을 다양한 방식으로 구현할 수 있습니다.</p>
+
+<h3 id="sol1-재귀">Sol.1 재귀</h3>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="code"><pre><span class="k">def</span> <span class="nf">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="n">n</span>
+
+<span class="n">fibo</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="c1"># 8</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>재귀를 배울 때 주로 팩토리얼이나 피보나치 수열을 사용하는데, 피보나치 수열에서 이 방식대로 구현하면 <strong>중복 호출</strong> 이 많아져 <code class="language-plaintext highlighter-rouge">Recursion Error</code>를 쉽게 만날 수 있다는… 시간복잡도가 <strong>\(O(2^n)\)</strong> 으로 가장 비효율적입니다.</p>
+<figure>
+<img src="/resources/images/FibonacciCallTree.png" style="margin:auto;" />
+<figcaption>
+<strong>Figure 2: </strong>피보나치 수열의 함수 호출
+</figcaption>
+</figure>
+
+<h3 id="sol2-반복">Sol.2 반복</h3>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="code"><pre><span class="k">def</span> <span class="nf">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+    <span class="k">return</span> <span class="n">a</span>
+
+<span class="n">fibo</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="c1"># 8</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p class="bottomless">이 방식은 함수 호출없이 n번 반복을 통해 구현하였으므로 시간 복잡도  <strong>\(O(N)\)</strong> 으로 1번 풀이법보다 효율적입니다.</p>
+<p><a name="fibo_dp"></a></p>
+
+<h3 id="sol3-dp">Sol.3 DP</h3>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="code"><pre><span class="k">def</span> <span class="nf">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">memo</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">memo</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">memo</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">memo</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">memo</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+
+<span class="n">fibo</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="c1"># 8</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p class="bottomless">DP(동적계획법)는 피보나치 수열을 구할 때 가장 많이 사용됩니다.</p>
+<p class="bottomless">이 방식에는 <code class="language-plaintext highlighter-rouge">Memoiztion</code>이 사용되었는데, <code class="language-plaintext highlighter-rouge">Memoization</code>이란 중복을 피하기 위해 <strong>저장</strong> 해두는 방식입니다.</p>
+<h3 id="sol4-lambda">Sol.4 lambda</h3>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="k">def</span> <span class="nf">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">fib</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">n</span><span class="p">:</span> <span class="n">n</span> <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="k">else</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    
+<span class="n">fibo</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="c1"># 8</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h3 class="bottomless" id="sol5-수식">Sol.5 수식</h3>
+<p style="text-align:center; padding:0px 30px;">
+\(F_n = \cfrac{1}{\sqrt{5}} \left( \left( \cfrac{1+\sqrt{5}}{2} \right)^n - \left( \cfrac{1-\sqrt{5}}{2} \right)^n \right)\)
+</p>
+<figcaption style="margin-bottom:50px;">
+  <p><strong>Equation 1: </strong>피보나치 수열의 일반식</p>
+</figcaption>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="k">def</span> <span class="nf">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">root_5</span> <span class="o">=</span> <span class="mi">5</span><span class="o">**</span><span class="mf">0.5</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">root_5</span> <span class="o">*</span> <span class="p">(((</span><span class="mi">1</span> <span class="o">+</span> <span class="n">root_5</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="n">n</span> <span class="o">-</span> <span class="p">((</span><span class="mi">1</span> <span class="o">-</span> <span class="n">root_5</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="n">n</span><span class="p">))</span>
+
+<span class="n">fibo</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="c1"># 8</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>알고리즘에 대한 일반식을 모른다면 문제를 풀면서 예외까지 고려한 수식 찾기란 하늘의 별따기..⭐
+그리고 피보나치 일반식의 경우 <strong>무리수</strong> 가 나오기 때문에 프로그래밍을 할 때 적합한 방식이 아니라고 합니다.</p>
+
+<p>개인적으로 <strong>DP</strong> 가 다른 알고리즘에 적용하기 좋고 효율적이기 때문에 가장 추천하는 방식이에요 ㅎㅎ</p>
+
+<p><strong>잘못된 내용이 있거나 조언이 있다면 언제든지 환영입니다^.^</strong></p>
+:ET

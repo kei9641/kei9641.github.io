@@ -1,7 +1,0 @@
-I"�<p>\(F_n = 
-\cases{
-F_n  &amp; \text{if } n\le 1\cr
-F_{n-1} + F_{n-2} &amp; \text{if } n\gt 1
-}\)
-<strong>잘못된 내용이 있거나 조언이 있다면 언제든지 환영입니다^.^</strong></p>
-:ET

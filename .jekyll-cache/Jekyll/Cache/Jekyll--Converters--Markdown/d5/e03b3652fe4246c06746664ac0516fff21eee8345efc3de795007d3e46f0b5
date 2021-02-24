@@ -1,0 +1,15 @@
+I"�<blockquote class="blockquote" cite="http://www.worldwildlife.org/who/index.html">
+  <p>제목 : 파도반 수열(<a href="https://www.acmicpc.net/problem/9461">boj 9461번</a>) <br />
+난이도 : silver 3🥈 <br />
+관련 알고리즘 : <a href="/tags/dp.html">DP</a></p>
+</blockquote>
+
+<blockquote class="blockquote" cite="http://www.worldwildlife.org/who/index.html">
+  <p>The first rule of any technology used in a business is that automation applied to an efficient operation will magnify the efficiency. The second is that automation applied to an inefficient operation will magnify the inefficiency.</p>
+  <footer><cite> - Bill Gates</cite></footer>
+</blockquote>
+
+<p>파도반 수열의 규칙만 잘 찾는다면 <a href="/algo/fibo/#fibo_dp">피보나치 수열</a>과 같은 방법으로 풀면 됩니다.</p>
+
+<p><strong>잘못된 내용이 있거나 조언이 있다면 언제든지 환영입니다^.^</strong></p>
+:ET
